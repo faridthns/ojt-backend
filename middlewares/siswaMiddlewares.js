@@ -7,11 +7,6 @@ module.exports = {
             errors.push('nama wajib (minimal 2 karakter)');
             res.send(errors);
         }
-        
-        // if (!harga || typeof harga !== 'number' || harga < 999) {
-        //     errors.push('harga wajib diisi pakai angka dan minimal 1000 rupiah');
-        //     res.send(errors);
-        // }
 
         if (errors.length) return req.status(400).json({ errors });
         next();
@@ -24,11 +19,6 @@ module.exports = {
             errors.push('jika disertakan, nama wajib (minimal 2 karakter)');
             res.send(errors);
         }
-
-        // if (!harga || typeof harga !== 'number' || harga < 999) {
-        //     errors.push('jka disertakan, harga wajib diisi pakai angka dan minimal 1000 rupiah');
-        //     res.send(errors);
-        // }
 
         if (errors.lentgh) return req.status(400).json({ errors });
         next();
